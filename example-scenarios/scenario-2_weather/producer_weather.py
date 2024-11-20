@@ -6,7 +6,8 @@ from kafka import KafkaProducer
 #name of the topic
 STREAMING_KAFKA_TOPIC = "streaming_weather_data"
 STREAMING_LIMIT = 5
-_TOKEN = 'your_token' #from api.weatherapi.com
+keyFile = open('api_key.txt', 'r')
+_TOKEN = keyFile.readline() #from api.weatherapi.com
 
 #server that the producer will be running
 producer = KafkaProducer(bootstrap_servers='localhost:9094')

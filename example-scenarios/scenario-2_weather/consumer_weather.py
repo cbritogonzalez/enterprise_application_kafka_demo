@@ -2,9 +2,7 @@ import json
 
 from kafka import KafkaConsumer
 
-STREAMING_CONFIRMED_KAFKA_TOPIC = "streaming_confirmed"
 STREAMING_KAFKA_TOPIC = "streaming_weather_data"
-HISTORICAL_KAFKA_TOPIC = "historical_weather_data"
 
 consumer_streaming = KafkaConsumer(
     STREAMING_KAFKA_TOPIC,
